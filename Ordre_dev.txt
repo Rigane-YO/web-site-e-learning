@@ -1,0 +1,141 @@
+✅ 1. Base de données & configuration globale
+(Commencer absolument par ici)
+
+data/courses.json
+→ Contient toutes les données essentielles pour alimenter toutes les pages.
+
+assets/js/data/course.js
+→ Version JS de la base si tu veux importer directement en script.
+
+assets/js/data/quiz-data.js
+→ Nécessaire pour que la page quiz.html fonctionne.
+
+✅ 2. Structure HTML principale (les pages sans logique)
+(Création des squelettes + balises + placeholders)
+
+index.html
+→ Page d’accueil, header/nav/footer, sections vides.
+
+courses.html
+→ Page liste des cours + zone pour recherche et filtres.
+
+course-view.html
+→ Page d’un cours (vidéo, description, liste chapitres).
+
+quiz.html
+→ Page pour afficher les QCM.
+
+profile.html (optionnel)
+→ Dépend de la progression, donc à faire plus tard.
+
+✅ 3. Fondations CSS (style global)
+(Mettre en place le design global avant d’ajouter les composants)
+
+assets/css/style.css
+→ Reset + variables couleurs + typographies.
+
+assets/css/layout.css
+→ Structure des pages (header, footer, sections, grille).
+
+assets/css/theme.css
+→ Mode clair / mode sombre (basé sur data-theme).
+
+✅ 4. Composants UI
+(Cartes, boutons, formulaires, progress bars...)
+
+assets/css/components.css
+→ Cartes des cours, boutons, champs, navbar, cards, modals.
+
+✅ 5. Responsive
+
+assets/css/responsive.css
+→ Breakpoints mobile → tablette → desktop.
+
+✅ 6. Scripts de base
+Logique qui s’applique à toutes les pages
+
+assets/js/app.js
+→ Navbar, menu mobile, thème sombre, utilitaires.
+
+✅ 7. Fonctionnalités avancées JavaScript
+(Cœur de ton application interactive)
+
+assets/js/progress.js
+→ Gestion LocalStorage + progression cours + scores.
+
+assets/js/courses.js
+→ Recherche instantanée + filtres + affichage des cartes.
+
+assets/js/course-view.js
+→ Lecture du cours, chapitres, barre de progression.
+
+assets/js/quiz.js
+→ Affichage des questions, validation, scoring + sauvegarde.
+
+✅ 8. Ajouts optionnels & finalisation
+
+Images / icônes (assets/img/…)
+
+Polices (assets/fonts)
+
+Librairies (aos/, bootstrap/, etc.)
+
+README.md (documentation finale)
+
+🎯 Résumé ultra-simplifié (ordre exact)
+PHASE 1 – Données
+
+courses.json
+
+course.js
+
+quiz-data.js
+
+PHASE 2 – Pages HTML
+
+index.html
+
+courses.html
+
+course-view.html
+
+quiz.html
+
+profile.html
+
+PHASE 3 – CSS
+
+style.css
+
+layout.css
+
+theme.css
+
+components.css
+
+responsive.css
+
+PHASE 4 – JS (base)
+
+app.js
+
+progress.js
+
+PHASE 5 – JS (fonctionnalités)
+
+courses.js
+
+course-view.js
+
+quiz.js
+
+PHASE 6 – Finalisation
+
+19–22 : images, fonts, libs, README.
+
+Si tu veux, je peux aussi te fournir :
+✅ L’ordre exact d’inclusion des <script> dans les pages (très important)
+ou
+✅ L’ordre de développement étape par étape sur X jours (plan de travail)
+
+Tu veux lequel ?

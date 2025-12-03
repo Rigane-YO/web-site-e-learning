@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du cours - E-Learning Platform</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="assets/libs/aos/aos.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="courses.html">Cours</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+        </div>
+    </header>
+
+    <!-- SECTION COURS -->
+    <section class="course-detail">
+        <div class="container">
+
+            <h2 id="course-title" data-aos="fade-up">Titre du cours</h2>
+            <p id="course-category" class="course-meta" data-aos="fade-up">Catégorie : Développement Web</p>
+            <p id="course-level" class="course-meta" data-aos="fade-up">Niveau : Débutant</p>
+
+            <!-- Vidéo -->
+            <div class="course-video" data-aos="fade-up">
+                <video id="course-video" controls width="100%">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo HTML5.
+                </video>
+            </div>
+
+            <!-- Description -->
+            <div class="course-description" data-aos="fade-up">
+                <h3>Description</h3>
+                <p id="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <!-- Liste des chapitres -->
+            <div class="course-chapters" data-aos="fade-up">
+                <h3>Chapitres</h3>
+                <ul id="chapter-list">
+                    <!-- Chapitres injectés dynamiquement par JS -->
+                </ul>
+            </div>
+
+            <!-- Progression -->
+            <div class="course-progress-container" data-aos="fade-up">
+                <h3>Progression</h3>
+                <div class="progress-bar">
+                    <div id="course-progress" class="progress"></div>
+                </div>
+                <p id="progress-percent">0%</p>
+            </div>
+
+            <!-- Bouton Quiz -->
+            <!--
+<div class="course-quiz-btn" data-aos="fade-up">
+    <button id="start-quiz-btn" class="quiz-btn">Démarrer le quiz</button>
+</div>
+-->
+
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2025 E-Learning Platform. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/libs/aos/aos.js"></script>
+    <script src="assets/js/data/course.js"></script>
+   
+    <script src="assets/js/progress.js"></script>
+    
+    <script src="assets/js/app.js"></script>
+
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const courseId = urlParams.get("id");
+    window.initCourseView(courseId);
+</script>
+
+    <script>
+        // AOS
+        AOS.init({ duration: 1200, once: true });
+
+        // Thème sombre
+        const themeButton = document.getElementById("theme-toggle");
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-theme");
+            themeButton.textContent = "☀️";
+        }
+        themeButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark-theme");
+            document.body.classList.contains("dark-theme")
+                ? (themeButton.textContent = "☀️", localStorage.setItem("theme", "dark"))
+                : (themeButton.textContent = "🌙", localStorage.setItem("theme", "light"));
+        });
+    </script>
+
+</body>
+</html>

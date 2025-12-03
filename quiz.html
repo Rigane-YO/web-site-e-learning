@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - E-Learning Platform</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- AOS pour animations -->
+    <link rel="stylesheet" href="assets/libs/aos/aos.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"></a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="courses.html">Cours</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+        </div>
+    </header>
+
+    <!-- SECTION QUIZ -->
+    <section class="quiz">
+        <div class="container">
+            <h2 data-aos="fade-up">Quiz</h2>
+            <div id="quiz-container" data-aos="fade-up">
+                <!-- Question et choix vont être injectés par JS -->
+            </div>
+            <div id="quiz-result" data-aos="fade-up" style="display:none;">
+                <h3>Résultat</h3>
+                <p id="score-text"></p>
+                <button id="retry-btn" class="btn btn-primary">Recommencer</button>
+                <a href="profile.html" class="btn btn-secondary">Retour au profil</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2025 E-Learning Platform. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/libs/aos/aos.js"></script>
+    <script src="assets/js/data/quiz-data.js"></script>
+    <script src="assets/js/quiz.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+        AOS.init({ duration: 1200, once: true });
+
+        // Thème sombre
+        const themeButton = document.getElementById("theme-toggle");
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-theme");
+            themeButton.textContent = "☀️";
+        }
+        themeButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark-theme");
+            document.body.classList.contains("dark-theme")
+                ? (themeButton.textContent = "☀️", localStorage.setItem("theme", "dark"))
+                : (themeButton.textContent = "🌙", localStorage.setItem("theme", "light"));
+        });
+    </script>
+
+</body>
+</html>

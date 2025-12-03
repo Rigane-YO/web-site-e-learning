@@ -1,0 +1,43 @@
+e-learning/
+|
+|----index.html
+|---courses.html
+|---course-view.html
+|---quiz.html
+|---profile.html
+|
+|---assets/
+|     |-----css/
+|     |      |------style.css
+|     |      |------layout.css
+|     |      |------components.css
+|     |      |------theme.css
+|     |      |------responsive.css
+|     |
+|     |-----js/
+|     |      |-----app.js
+|     |      |-----data/
+|     |      |       |-----course.js     -> Base locale des cours
+|     |      |       |-----quiz-data.js   -> Question du quiz
+|     |      |------courses.js            -> Filtres + recherche
+|     |      |------course-view.js        -> Gestion affichage d'un cours
+|     |      |------quiz.js               -> Logique du quiz
+|     |      |------progress.js           -> Progression
+|     |
+|     |----img/
+|     |      |----logo/
+|     |      |----courses/
+|     |      |----icons/
+|     |      |----ui/
+|     |
+|     |-----fonts/
+|     |
+|     |-----libs
+|     |-----aos/
+|     |-----chatjs/
+|     |-----bootstrap/
+|     |
+|----data/
+|     |-----courses.json
+|
+|-----README.md

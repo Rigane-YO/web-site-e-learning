@@ -1,0 +1,23 @@
+/* Bouton mode sombre 🌙 / ☀️ */
+.theme-btn {
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition-medium);
+}
+
+.theme-btn:hover {
+    background: var(--color-primary-dark);
+}
+
+body.dark-theme .theme-btn {
+    background: var(--color-secondary);
+}
+
+body.dark-theme .theme-btn:hover {
+    background: var(--color-secondary-dark);
+}

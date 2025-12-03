@@ -1,0 +1,103 @@
+1️⃣ style.css
+
+But : Base globale et typographie
+
+Contenu typique :
+
+Police globale (Google Fonts)
+
+Couleur de base du texte et du fond
+
+Interlignes, marges et paddings globaux (body, h1-h6, p)
+
+Style de liens (a)
+
+Listes (ul, li)
+
+Reset ou normalize minimal si nécessaire
+
+
+2️⃣ layout.css
+
+But : Structure et positionnement
+
+Contenu typique :
+
+Grid et Flexbox pour sections et containers
+
+Header, footer, sections principales (.hero, .container)
+
+Marges/paddings de layout
+
+
+
+
+3️⃣ components.css
+
+But : Composants réutilisables
+
+Contenu typique :
+
+Boutons (.btn, .btn-primary)
+
+Cartes (.course-card, .category-card)
+
+Barres de progression
+
+Formulaires, inputs, badges, etc.
+
+
+
+4️⃣ theme.css
+
+But : Thèmes (clair/sombre) ou couleurs globales
+
+Contenu typique :
+
+Variables CSS pour couleurs, fonds, boutons
+
+Mode sombre
+
+Exemple :
+
+
+
+
+5️⃣ responsive.css
+
+But : Adaptabilité mobile / tablette / desktop
+
+Contenu typique :
+
+Media queries
+
+Ajustements de layout pour différentes tailles
+
+Exemple :
+
+
+
+
+| Fichier                    | Rôle                                                                                                                                                        |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `assets/js/data/course.js` | Contient la **base locale des cours** (titre, image, catégorie, niveau, description…)                                                                       |
+| `assets/js/courses.js`     | Contient la logique **filtre + recherche + affichage dynamique** des cours                                                                                  |
+| `assets/js/app.js`         | Script principal qui initialise certaines fonctionnalités (thème, AOS, éventuellement l’injection des cours si `courses.js` est appelé depuis `index.html`) |
+
+
+
+
+❓ Souhaites-tu maintenant :
+✔ Générer progress.js complet ?
+✔ Générer le design CSS de profile (components + layout) ?
+✔ Ajouter un bouton “Réinitialiser ma progression” ?
+✔ Connecter le profile avec quiz.js et course-view.js ?
+
+Dis-moi ce que tu veux faire ensuite !
+
+
+| Page               | Interaction                                                                            |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| `courses.html`     | L’utilisateur commence un cours → `progress.js` met à jour la progression              |
+| `course-view.html` | L’utilisateur avance dans un chapitre → `progress.js` enregistre le pourcentage actuel |
+| `quiz.html`        | L’utilisateur passe un quiz → score sauvegardé → affiché sur profil                    |

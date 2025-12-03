@@ -1,0 +1,130 @@
+Dans le cadre du projet pedagogique,les etudiant doivent concevoir et realizer une plateforme d'apprendissage en ligne accessible sur tous support (ordinateir, tablette, mobile)
+Le systeme doit fonctionner uniquement  Front-End, C'est a dire avec HTML, CSS et JavaScript sans backend ni base de donnee serveur
+
+1.2 Objectif principal
+L'objectif est de creer une application web moderne permettant aux utilisateur de :
+> consulter une liste de cours
+> Acceder a un cours detaille (video, chapitre)
+> passer un quiz interactif
+> utiliser une interface ergonomique et responsive
+
+2 Objectif pedagogique
+> Miatreise HTML5 avance
+> Creer un desing proffessionnel avec CSS3 (Flexbox, Grid, responsive)
+> Manipuler JavaScript pour:
+ - Interface visuelle
+ - flitre dynamique
+ - quiz interactifs
+ - Stockage locale des donnees (LogalStorage)
+
+
+> Organiser un projet compte multi-page
+> Adpoter une approche modulaire avec fichier separee
+
+
+
+3 P´erim`etre fonctionnel
+3.1 Pages `a r´ealiser
+
+3.1.1 Page d’accueil
+Contient :
+
+     logo + menu,
+     banni`ere principale,
+     slogan,
+     barre de recherche,
+     cat´egories de cours,
+     section des cours populaires,
+     pied de page.
+
+3.1.2 Page liste des cours
+Fonctionnalit´es :
+
+     recherche instantan´ee,
+     filtres (cat´egorie, niveau),
+     affichage en cartes,
+     chaque carte contient un visuel, un titre, un niveau, un bouton.
+
+3.1.3 Page d’un cours
+     titre du cours,
+     description,
+     vid´eo int´egr´ee,
+     liste des chapitres,
+     barre de progression,
+     bouton Passer au quiz.
+
+
+3.1.4 Page quiz
+     questions en QCM,
+     validation des r´eponses,
+     score final,
+     sauvegarde du score.
+
+3.1.5 Page profil (optionnel)
+     statistiques utilisateur,
+     progression des cours,
+     mode sombre.
+4 Fonctionnalit´es JavaScript
+
+
+4.1 Recherche dynamique
+Filtrage en temps r´eel de la liste des cours selon un mot-cl´e.
+
+4.2 Filtres combin´es
+
+Filtres par :
+     cat´egorie,
+     niveau,
+     mot-cl´e.
+
+Les filtres doivent fonctionner simultan´ement.
+
+4.3 Suivi de progression
+
+Utilisation de LocalStorage pour enregistrer :
+     le chapitre courant,
+     le pourcentage de progression,
+     le score du quiz.
+
+4.4 Quiz interactif
+     questions stock´ees en JSON ou fichier JS,
+     correction dynamique,
+     score final affich´e.
+
+4.5 Mode sombre
+
+Basculer entre deux th`emes persistants graˆce `a LocalStorage.
+
+4.6 Animations (optionnel)
+
+Possibilit´e d’utiliser AOS ou GSAP pour des animations modernes.
+
+5 Design et exp´erience utilisateur
+
+5.1 Identit´e visuelle
+
+     palette coh´erente et moderne,
+     typographies Google Fonts,
+     design minimaliste.
+5.2 Mise en page
+
+ utilisation de Flexbox et CSS Grid,
+     responsive : mobile, tablette, desktop.
+
+5.3 Composants UI
+
+     cartes,
+     boutons styl´es,
+     barres de progression,
+     navigation fixe ou mobile.
+
+
+6 Contraintes techniques
+ HTML5, CSS3, JavaScript uniquement,
+ aucun backend (pas de PHP, SQL, Node.js),
+ donn´ees stock´ees en fichiers JSON ou JS,
+ utilisation du LocalStorage pour simuler une base de donn´ees,
+ d´eploiement possible sur GitHub Pages ou Netlify.
+
+
+

@@ -1,0 +1,62 @@
+/* ---------------------------
+   RESPONSIVE (petit écran)
+   Ces media queries permettent d'adapter le design aux tablettes et mobiles.
+--------------------------- */
+
+/* Pour les écrans <= 1024px (tablettes larges / petits laptops) */
+@media (max-width: 1024px) {
+    /* La grille de cours passe de 3 colonnes à 2 colonnes */
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Pour les écrans <= 768px (tablettes / mobiles portrait) */
+@media (max-width: 768px) {
+
+    /* Le container du header devient vertical (logo + nav empilés) */
+    .header-container {
+        flex-direction: column;
+        gap: 15px; /* espace entre les éléments */
+    }
+
+    /* Menu de navigation en colonne pour faciliter le clic sur mobile */
+    .nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Taille du titre principal réduit pour s’adapter à l’écran */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Barre de recherche prend 80% de la largeur pour mobile */
+    #search-input {
+        width: 80%;
+    }
+
+    /* La grille de cours passe à 1 seule colonne pour mobile */
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pour les écrans <= 480px (mobiles petits) */
+@media (max-width: 480px) {
+
+    /* Réduction du titre principal pour petits écrans */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Réduction du paragraphe de la section hero pour petits écrans */
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Les cartes de catégories ont un padding réduit pour mieux tenir à l’écran */
+    .category-card {
+        padding: 20px;
+    }
+}
