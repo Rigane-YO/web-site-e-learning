@@ -29,8 +29,8 @@ if (themeButton) {
 // MENU RESPONSIVE (OPTIONNEL)
 // ================================
 // Exemple de menu toggle pour mobile
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav ul");
+const menuToggle = document.querySelector(".menu_toggle");
+const nav = document.querySelector("nav");
 
 if (menuToggle && nav) {
     menuToggle.addEventListener("click", () => {

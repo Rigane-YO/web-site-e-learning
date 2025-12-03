@@ -13,8 +13,13 @@
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    text-align: center;
+}
+
+.logo .logo-text {
+  font-size: 1.4em;
 }
 
 .header .logo img {
@@ -23,7 +28,7 @@
 
 .nav ul {
     display: flex;
-    gap: 25px;
+    gap: 45px;
 }
 
 .nav ul li a {
@@ -132,7 +137,7 @@
 .category-card {
     background: var(--color-bg);
     padding: 18px 35px;
-    border-radius: 50px; /* forme bouton */
+    border-radius: 20px; /* forme bouton */
     box-shadow: var(--shadow-soft);
     cursor: pointer;
     border: 2px solid var(--primary); /* bouton plus visible */
@@ -144,6 +149,7 @@
         border-color 0.25s ease;
     font-weight: 500;
     color: var(--color-text);
+    text-align: center;
 }
 
 /* Effet hover */
@@ -207,7 +213,11 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+/*centrer le container de profil*/
 
+.container_profil {
+
+}
 /* Section profil */
 .profile {
   padding: 60px 0;
@@ -262,6 +272,7 @@
   margin-bottom: 20px;
   font-size: 1.7rem;
   font-weight: 600;
+  text-align: center;
 }
 
 /* Statistiques */
@@ -270,6 +281,8 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
   margin-bottom: 50px;
+  text-align: center;
+  align-items: center;
 }
 
 .stat-box {

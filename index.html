@@ -39,8 +39,9 @@
             </nav>
 
             <button id="theme-toggle" class="theme-btn">🌙</button>
-
         </div>
+        <button class="menu_toggle ">=</button>
+
     </header>
 
     <!-- BANNIÈRE PRINCIPALE -->
@@ -109,7 +110,8 @@
 <!-- Script spécifique à l'affichage des cours -->
 <script src="assets/js/courses.js"></script>
 
-    
+<!-- deplacement de script pour le controle de theme dans un fichier entier pour le bonne pratique -->
+<script src = "ui/theme_mod.js"></script>
 
     <!-- Initialisation -->
     <script>
@@ -118,29 +120,5 @@
             once: true
         });
     </script>
-
-    <script>
-    const themeButton = document.getElementById("theme-toggle");
-
-    // Charger le thème sauvegardé
-    if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-theme");
-        themeButton.textContent = "☀️";
-    }
-
-    themeButton.addEventListener("click", () => {
-        document.body.classList.toggle("dark-theme");
-
-        if (document.body.classList.contains("dark-theme")) {
-            themeButton.textContent = "☀️";
-            localStorage.setItem("theme", "dark");
-        } else {
-            themeButton.textContent = "🌙";
-            localStorage.setItem("theme", "light");
-        }
-    });
-</script>
-
-
 </body>
 </html>

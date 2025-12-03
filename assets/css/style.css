@@ -109,6 +109,11 @@ img {
     background-color: var(--color-secondary-dark);
 }
 
+/*cache le menu umberger*/
+.menu_toggle {
+    display : none
+}
+
 /* ---------------------------
    HEADER / FOOTER GLOBAL
 --------------------------- */

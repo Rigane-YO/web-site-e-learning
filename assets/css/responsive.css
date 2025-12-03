@@ -5,6 +5,7 @@
 
 /* Pour les écrans <= 1024px (tablettes larges / petits laptops) */
 @media (max-width: 1024px) {
+
     /* La grille de cours passe de 3 colonnes à 2 colonnes */
     .courses-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -16,14 +17,28 @@
 
     /* Le container du header devient vertical (logo + nav empilés) */
     .header-container {
-        flex-direction: column;
-        gap: 15px; /* espace entre les éléments */
+
+        gap: 15px;
+        /* espace entre les éléments */
+
+    }
+
+    .logo {
+        height: 50%;
+        width: 50%;
+        text-align: center;
+    }
+
+    .logo-text {
+        font-size: large;
     }
 
     /* Menu de navigation en colonne pour faciliter le clic sur mobile */
-    .nav ul {
-        flex-direction: column;
-        gap: 15px;
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
     }
 
     /* Taille du titre principal réduit pour s’adapter à l’écran */
@@ -45,6 +60,16 @@
 /* Pour les écrans <= 480px (mobiles petits) */
 @media (max-width: 480px) {
 
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+        
+    }
+
+
     /* Réduction du titre principal pour petits écrans */
     .hero h1 {
         font-size: 1.8rem;
@@ -58,5 +83,29 @@
     /* Les cartes de catégories ont un padding réduit pour mieux tenir à l’écran */
     .category-card {
         padding: 20px;
+    }
+
+    .menu_toggle {
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 20px;
+        width: 40px;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+    }
+    .theme-btn {
+        position: absolute;
+        left: 16px;
+        top: 20px;
     }
 }
