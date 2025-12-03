@@ -67,4 +67,4 @@ const quizQuestions = [
 ];
 
 // (optionnel)
-// export { quizQuestions };
+export { quizQuestions };

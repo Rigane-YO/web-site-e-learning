@@ -26,15 +26,15 @@ if (themeButton) {
 }
 
 // ================================
-// MENU RESPONSIVE (OPTIONNEL)
+// MENU RESPONSIVE
 // ================================
-// Exemple de menu toggle pour mobile
 const menuToggle = document.querySelector(".menu_toggle");
 const nav = document.querySelector("nav");
 
 if (menuToggle && nav) {
     menuToggle.addEventListener("click", () => {
         nav.classList.toggle("active");
+        menuToggle.textContent = nav.classList.contains("active") ? "x" : "☰";
     });
 }
 
